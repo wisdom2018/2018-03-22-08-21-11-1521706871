@@ -1,18 +1,12 @@
 package practice07;
 
-public class Teacher extends Person{
+public class Teacher extends Person {
 
-    String Klass = "";
-
-    public Teacher(String name, int age, String Klass) {
-        super(name, age);
-        this.Klass = Klass;
-    }
-
+    Klass klass;
 
     public Teacher(String name, int age, Klass Klass) {
         super(name, age);
-
+        this.klass = Klass;
 
     }
 
@@ -20,31 +14,31 @@ public class Teacher extends Person{
         super(name, age);
     }
 
-    public String getKlass() {
-        return Klass;
+    public Klass getKlass() {
+        return klass;
     }
 
     public void setKlass(String klass) {
-        Klass = klass;
+        klass = klass;
     }
 
     public String introduce() {
         String result = "";
         if (this.getKlass() != null) {
-            result = super.introduce() +  "I am a Teacher. I teach "+this.getClass()+".";
+            result = super.introduce() + " I am a Teacher. I teach Class " + this.getKlass().getNumber() + ".";
 
-        }else if(this.getKlass() == null) {
-            result = super.introduce() + "I am a Teacher. I teach No Class.";
+        } else if (this.getKlass() == null) {
+            result = super.introduce() + " I am a Teacher. I teach No Class.";
         }
         return result;
     }
 
-    public String introduceWith(Student t){
+    public String introduceWith(Student t) {
         String result = "";
-        if(this.getKlass().equals(t.getKlass())){
-            result = super.introduce()+" I am a Teacher. I teach "+t.getName()+".";
-        }else{
-            result = super.introduce()+"I am a Teacher. I don't teach "+t.getName();
+        if (this.getKlass().equals(t.getKlass())) {
+            result = super.introduce() + " I am a Teacher. I teach " + t.getName() + ".";
+        } else {
+            result = super.introduce() + " I am a Teacher. I don't teach " + t.getName() + ".";
         }
         return result;
     }

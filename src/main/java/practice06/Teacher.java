@@ -11,7 +11,6 @@ public class Teacher extends Person {
 
     public Teacher(String name, int age) {
         super(name, age);
-        //System.out.println(super.introduce() + " I am a Teacher. I teach No Class.");
     }
 
     public int getKlass() {

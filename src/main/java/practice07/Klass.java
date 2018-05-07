@@ -4,6 +4,7 @@ public class Klass {
     int number = 0;
 
     public Klass(int number) {
+
         this.number = number;
     }
 
@@ -16,6 +17,6 @@ public class Klass {
     }
 
     public String getDisplayName(){
-        return "Class "+this.number;
+        return "Class "+this.getNumber();
     }
 }
