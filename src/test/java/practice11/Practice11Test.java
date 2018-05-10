@@ -168,7 +168,4 @@ public class Practice11Test {
 
         assertThat(systemOut().endsWith("I am Tom. I know Jerry become Leader of Class 2.\n")).isNotEqualTo(true);
     }
-   // f
-    //..
-    //ff
 }
