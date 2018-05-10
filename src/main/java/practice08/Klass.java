@@ -17,22 +17,25 @@ public class Klass {
         this.number = number;
     }
 
-    public String getLeader() {
-        return leader;
-    }
-
     public void setLeader(String leader) {
         this.leader = leader;
     }
 
+
     public String assignLeader(Student student){
         String result = "";
-        result = "the Leader of "+student.getKlass();
-        return result;
+        result = " I am Leader of Class "+student.getKlass();
+        String leadername = student.name;
+        return leadername ;
+    }
+
+
+    public String getLeader(){
+        return this.leader;
     }
 
     public String getDisplayName(){
         String class_name = "";
-        return "Class"+this.getClass();
+        return "ç";
     }
 }

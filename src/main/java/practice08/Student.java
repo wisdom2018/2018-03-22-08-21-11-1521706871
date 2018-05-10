@@ -19,7 +19,10 @@ public class Student extends Person{
 
     public String introduce(){
 
-        String result = super.introduce()+ "I am a Student. I am at Class"+this.getKlass()+".";
+        String result = "";
+
+            result = super.introduce() + " I am a Student. I am Leader of Class " + this.getKlass().getNumber() + ".";
+           // result = super.introduce()+" I am a Student. I am at Class "+this.getKlass().getNumber()+".";
         return result;
     }
 }

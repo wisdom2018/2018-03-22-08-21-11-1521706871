@@ -76,7 +76,7 @@
 //    public void should_student_have_name_age_and_class_number() throws Exception {
 //        Student tom = new Student(1, "Tom", 21, klass2);
 //        assertThat(tom.getName()).isEqualTo("Tom");
-//        assertThat(tom.getAge()).isEqualTo(21);
+//        assertThata(tom.getAge()).isEqualTo(21);
 //        assertThat(tom.getKlass()).isEqualTo(klass2);
 //    }
 //

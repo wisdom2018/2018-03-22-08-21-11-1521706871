@@ -26,7 +26,7 @@ Klass还有一个appendMember方法，接受一个Student实例。意味将一�
 相应的调用Student的introduce方法也只会返回旧的字符串。
 
 再写一个Teacher类继承Person类，除了id，name，age属性，也有classes属性。也有一个introduce方法，
-introduce方法返回一个字符串形如：
+ 方法返回一个字符串形如：
 
 >My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2, 3.
 
