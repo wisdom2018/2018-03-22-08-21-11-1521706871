@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Klass {
 
-    String leader;
-    int number;
+    private Student leader;
+    private Integer number;
     ArrayList<Integer> studentList = new ArrayList<>();
 
     public Klass(int number) {
@@ -20,24 +20,34 @@ public class Klass {
         this.number = number;
     }
 
-    public String assignLeader(Student student){
-
-        if(!studentList.contains(student.getId())){
-            leader = "It is not one of us.";
-        }else {
-            leader = student.getName();
-        }
+    public Student getLeader() {
         return leader;
     }
 
-    public ArrayList<Integer> appendMember(Student student){
-        studentList.add(student.getId());
-        return studentList;
+    public void setLeader(Student leader) {
+        this.leader = leader;
+    }
+
+    public String getDisplayName(){
+        return "Class 2";
+    }
+
+    public void assignLeader(Student student){
+
+        if(student.getKlass()!=this){
+            System.out.print("It is not one of us.\n");
+        }else {
+            this.leader = student;
+        }
+    }
+
+    public void appendMember(Student student){
+        student.getKlass().setNumber(this.number);
     }
 
     public boolean isIn(Student student){
         boolean result  = false;
-        if(student.getKlass().number!=0){
+        if(student.getKlass()==this){
             result = true;
         }else{
             result = false;
