@@ -17,17 +17,11 @@ public class Student extends Person{
         this.klass = klass;
     }
 
-    public String introduce(){
-
-        String result = "";
-        System.out.println(this.getName());
-        System.out.println(this.klass.getLeader()+" leader");
-
-        if(this.getName().equals(this.klass.getLeader())) {
-            result = super.introduce() + " I am a Student. I am Leader of Class 2.";
-        }else{
-            result = super.introduce()+" I am a Student. I am at Class 2.";
-        }
-        return result;
+    @Override
+    public String introduce() {
+        if (this.equals(klass.getLeader()))
+            return super.introduce()+" I am a Student. I am Leader of Class 2.";
+        else
+            return super.introduce()+" I am a Student. I am at Class 2.";
     }
 }
